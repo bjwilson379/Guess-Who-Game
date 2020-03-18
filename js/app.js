@@ -1,30 +1,23 @@
 console.log('Guess Who');
 
-// class 
-// class Character {
-// 	constructor(name, gender, facialHair, mustache, beard, hat, glasses, eyeColor, blushing, hairColor, bald, bigNose, earrings) {
-// 		this.name = name
-// 		this.gender = gender
-// 		this.facialHair = facialHair
-// 		this.mustache = mustache
-// 		this.beard = beard
-// 		this.hat = hat
-// 		this.glasses = glasses
-// 		this.eyeColor = eyeColor
-// 		this.blushing = blushing
-// 		this.hairColor = hairColor 
-// 		this.bald = bald
-// 		this.bigNose = bigNose
-// 		this.earrings = earrings
-// 	}
-// }
 
 // game app
 const guessWhoApp = {
 
+	winCharacter: null,
+
 	selectRandomCharacter: function() {
-		const charactersName = characters.name
-		const randCharacter = Math.floor(Math.random() * characters.length)
+		// get person from the array and store in prop above
+
+		const randomCharIndex = Math.floor(Math.random() * characters.length)
+
+		// get the char from the array
+		const char = characters[randomCharIndex]
+
+		// store in above property
+		this.winCharacter = char
+		
+
 	},
 
 	// eliminateCharacter: function(nameArr) {
@@ -48,12 +41,27 @@ const guessWhoApp = {
 	}
 }
 
+guessWhoApp.selectRandomCharacter()
+
+
+
+
+
+
+
 //listener on the button 
 //function that takes all characters and checks each property (gender) and then returns the names
 //ex pass in character array
 //returning ['Alex', 'Alfred']
 
+const question1 = document.querySelector('#question-1')
+question1.addEventListener('click', (event) => {
+	// calling select name 
+	// namesToDelete = selectName(); 
+	guessWhoApp.selectName(question1);
+	console.log(event);
 
+})
 
 
 // listeners 
