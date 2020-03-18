@@ -16,8 +16,24 @@ const guessWhoApp = {
 
 		// store in above property
 		this.winCharacter = char
-		
 
+	},
+
+	compareQuestionAndWinCharacter: function(gender) {
+		//loop through characters array
+		for(let i = 0; i < characters.length; i++) {
+			// if win character is a man
+			if(this.winCharacter.gender === 'male') {
+				// change DOM: put an X over women
+				
+					// gender.css('opacity', 0)
+				console.log(i, 'put an X over women');	
+			// else if win character is a woman
+			} else {
+				// put an x over men
+				console.log(i, 'put an x over men');
+			}	
+		}
 	},
 
 	// eliminateCharacter: function(nameArr) {
@@ -42,9 +58,7 @@ const guessWhoApp = {
 }
 
 guessWhoApp.selectRandomCharacter()
-
-
-
+guessWhoApp.compareQuestionAndWinCharacter()
 
 
 
@@ -58,9 +72,7 @@ const question1 = document.querySelector('#question-1')
 question1.addEventListener('click', (event) => {
 	// calling select name 
 	// namesToDelete = selectName(); 
-	guessWhoApp.selectName(question1);
-	console.log(event);
-
+	guessWhoApp.compareQuestionAndWinCharacter(question1);
 })
 
 
