@@ -51,6 +51,30 @@ const guessWhoApp = {
 		}
 	},
 
+	compareFacialHairAndWinCharacter: function() {
+		for(let i = 0; i < characters.length; i++) {
+
+			if(this.winCharacter.facialHair === true) {
+				if(characters[i].facialHair === true) {
+
+				} else {
+				let thisPerson = document.querySelector(`#${characters[i].name}`)
+				// console.log("this is thisPerson inside the func\n", thisPerson);
+				thisPerson.classList.add('crossOff')
+
+				}
+
+			} else {
+				if(characters[i].facialHair === false) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')
+				}
+			}
+		}
+	},
 	// eliminateCharacter: function(nameArr) {
 	// 	// based on the question type it should eliminate the character 
 	// 	// Question 1 "Is the character a man"
@@ -76,17 +100,17 @@ guessWhoApp.selectRandomCharacter()
 //guessWhoApp.compareQuestionAndWinCharacter()
 
 
-
-//listener on the button 
-//function that takes all characters and checks each property (gender) and then returns the names
-//ex pass in character array
-//returning ['Alex', 'Alfred']
-
+// Gender Question 1
 const question1 = document.querySelector('#question-1')
 question1.addEventListener('click', (event) => {
-	// calling select name 
-	// namesToDelete = selectName(); 
 	guessWhoApp.compareQuestionAndWinCharacter(question1);
+})
+
+// Facial Hair Question 2
+const question2 = document.querySelector('#question-2')
+question2.addEventListener('click', (event) => {
+	guessWhoApp.compareFacialHairAndWinCharacter(question2);
+	console.log(event);
 })
 
 
