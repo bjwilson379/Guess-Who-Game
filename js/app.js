@@ -1,4 +1,3 @@
-console.log('Guess Who');
 
 
 // game app
@@ -23,15 +22,31 @@ const guessWhoApp = {
 		//loop through characters array
 		for(let i = 0; i < characters.length; i++) {
 			// if win character is a man
-			if(this.winCharacter.gender === 'male') {
-				// change DOM: put an X over women
+			if(this.winCharacter.gender === 'female') {
 				
-					// gender.css('opacity', 0)
-				console.log(i, 'put an X over women');	
-			// else if win character is a woman
+				if(characters[i].gender === 'male'){
+
+					//create an X element and place it on the item(div or whatever the node element is)
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')
+					
+				} else {
+					// console.log("not a boy");
+				}
+
 			} else {
-				// put an x over men
-				console.log(i, 'put an x over men');
+				if(characters[i].gender === 'female'){
+					// console.log("this is characters name\n", characters[i].name);
+					// console.log("this is characters gender\n", characters[i].gender);
+
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')
+
+				} else {
+		
+				}
 			}	
 		}
 	},
@@ -58,8 +73,7 @@ const guessWhoApp = {
 }
 
 guessWhoApp.selectRandomCharacter()
-guessWhoApp.compareQuestionAndWinCharacter()
-
+//guessWhoApp.compareQuestionAndWinCharacter()
 
 
 
@@ -76,11 +90,8 @@ question1.addEventListener('click', (event) => {
 })
 
 
-// listeners 
-// const question1 = document.querySelectorAll('#question-1')
-// question1.addEventListener('click', (event) => {
-	//calling select name 
-	//namesToDelete = selectName(); 
-// 	guessWhoApp.eliminateCharacter(namesToDelete);
+console.log("this is the winCharacter\n", guessWhoApp.winCharacter)
 
-// })
+
+
+

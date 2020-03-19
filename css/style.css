@@ -48,6 +48,19 @@ section {
 
 .card-image {
 	display: flex;
-	border: 1px solid indianred;
 	border-radius: 25px;
 }
+
+
+.crossOff {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: .1;
+	width: 100px;
+	padding-bottom: 3px;
+}
+
+
+
+
