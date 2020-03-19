@@ -61,6 +61,10 @@ section {
 	padding-bottom: 3px;
 }
 
+div .intro-screen {
+	display: flex;
+	text-align: center;
+}
 
 
 
