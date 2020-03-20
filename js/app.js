@@ -247,12 +247,37 @@ const guessWhoApp = {
 		}
 	},
 
+	compareEarringsAndWinCharacter: function() {
+		for(let i = 0; i < characters.length; i++) {
+			if(this.winCharacter.earrings === true) {
+
+				if(characters[i].earrings === true) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			} else {
+
+				if(characters[i].earrings === false) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			}
+		}
+	},
+
 	checkWinner: function() {
 		// if character input name === winCharacter name 
 			// win the game 
-			if(itemTextInput.value === this.winCharacter.name) {
-				console.log('winner');
-			}
+			console.log(itemTextInput.value);
+			// if(itemTextInput.value === this.winCharacter.name) {
+			// 	console.log('winner');
+			// }
 		// if character input name != winCharacter name 
 			// lose the game 
 	},
@@ -337,15 +362,21 @@ question9.addEventListener('click', (event) => {
 	guessWhoApp.compareMustacheAndWinCharacter(question9);
 })
 
-// // Submit a Guess - Final
-// const guessInput = document.querySelector('#form-input')
-// guessInput.addEventListener('submit', (event) => {
+// Earrings Question - 10
+const question10 = document.querySelector('#question-10')
+question10.addEventListener('click', (event) => {
+	guessWhoApp.compareEarringsAndWinCharacter(question10);
+})
 
-//   const itemTextInput = document.querySelector('#guess-input')
-//   guessWhoApp.checkWinner(itemTextInput.value)  
-//   	console.log(itemTextInput.value);
-//   event.preventDefault() // <--- stops the form submission
-// })
+// Submit a Guess - Final
+const guessInput = document.querySelector('#form-input')
+guessInput.addEventListener('submit', (event) => {
+
+  const itemTextInput = document.querySelector('#guess-input')
+  guessWhoApp.checkWinner(itemTextInput.value)  
+  event.preventDefault() // <--- stops the form submission
+  	console.log(itemTextInput.value);
+})
 
 console.log("this is the winCharacter\n", guessWhoApp.winCharacter)
 
