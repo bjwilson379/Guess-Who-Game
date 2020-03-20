@@ -127,6 +127,54 @@ const guessWhoApp = {
 		}
 	},
 
+	compareBlushingAndWinCharacter: function() {
+		for(let i = 0; i < characters.length; i++) {
+			if(this.winCharacter.blushing === true) {
+
+				if(characters[i].blushing === true) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			} else {
+
+				if(characters[i].blushing === false) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			}
+		}
+	},
+
+	compareBaldAndWinCharacter: function() {
+		for(let i = 0; i < characters.length; i++) {
+			if(this.winCharacter.bald === true) {
+
+				if(characters[i].bald === true) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			} else {
+
+				if(characters[i].bald === false) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			}
+		}		
+	},
+
 	checkWinner: function() {
 		// if character input name === winCharacter name 
 			// win the game 
@@ -185,7 +233,18 @@ question3.addEventListener('click', (event) => {
 const question4 = document.querySelector('#question-4')
 question4.addEventListener('click', (event) => {
 	guessWhoApp.compareGlassesAndWinCharacter(question4);
-	console.log(event);
+})
+
+// Blushing Question - 5
+const question5 = document.querySelector('#question-5')
+question5.addEventListener('click', (event) => {
+	guessWhoApp.compareBlushingAndWinCharacter(question5);
+})
+
+// Bald Question - 6
+const question6 = document.querySelector('#question-6')
+question6.addEventListener('click', (event) => {
+	guessWhoApp.compareBaldAndWinCharacter(question6);
 })
 
 // // Submit a Guess - Final
