@@ -175,6 +175,30 @@ const guessWhoApp = {
 		}		
 	},
 
+	compareBigNoseAndWinCharacter: function() {
+		for(let i = 0; i < characters.length; i++) {
+			if(this.winCharacter.bigNose === true) {
+
+				if(characters[i].bigNose === true) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			} else {
+
+				if(characters[i].bigNose === false) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			}
+		}
+	},
+
 	checkWinner: function() {
 		// if character input name === winCharacter name 
 			// win the game 
@@ -245,6 +269,12 @@ question5.addEventListener('click', (event) => {
 const question6 = document.querySelector('#question-6')
 question6.addEventListener('click', (event) => {
 	guessWhoApp.compareBaldAndWinCharacter(question6);
+})
+
+// Big Nose Question - 7
+const question7 = document.querySelector('#question-7')
+question7.addEventListener('click', (event) => {
+	guessWhoApp.compareBigNoseAndWinCharacter(question7);
 })
 
 // // Submit a Guess - Final

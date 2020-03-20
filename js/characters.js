@@ -34,7 +34,7 @@ const characters = [
 	{name: 'Bernard', gender: 'male', facialHair: false, mustache: false, beard: false, hat: true, glasses: false, eyeColor: 'brown', blushing: false, hairColor: 'brown', bald: false, bigNose: true, earrings: false},
 	{name: 'Bill', gender: 'male', facialHair: true, mustache: false, beard: true, hat: false, glasses: false, eyeColor: 'brown', blushing: true, hairColor: 'orange', bald: true, bigNose: false, earrings: false},
 	{name: 'Charles', gender: 'male', facialHair: true, mustache: true, beard: false, hat: false, glasses: false, eyeColor: 'brown', blushing: false, hairColor: 'yellow', bald: false, bigNose: false, earrings: false},
-	{name: 'Claire', gender: 'female', facialHair: false, mustache: false, beard: false, hat: true, glasses: true, eyeColor: 'brown', blushing: false, hairColor: 'orange', bald: false, bigNose: true, earrings: true},
+	{name: 'Claire', gender: 'female', facialHair: false, mustache: false, beard: false, hat: true, glasses: true, eyeColor: 'brown', blushing: false, hairColor: 'orange', bald: false, bigNose: false, earrings: true},
 
 	{name: 'David', gender: 'male', facialHair: true, mustache: false, beard: true, hat: false, glasses: false, eyeColor: 'brown', blushing: false, hairColor: 'yellow', bald: false, bigNose: false, earrings: false}, 
 	{name: 'Eric', gender: 'male', facialHair: false, mustache: false, beard: false, hat: true, glasses: false, eyeColor: 'brown', blushing: false, hairColor: 'yellow', bald: false, bigNose: false, earrings: false},
@@ -42,7 +42,7 @@ const characters = [
 	{name: 'George', gender: 'male', facialHair: false, mustache: false, beard: false, hat: true, glasses: false, eyeColor: 'brown', blushing: false, hairColor: 'white', bald: false, bigNose: false, earrings: false},
 	{name: 'Herman', gender: 'male', facialHair: false, mustache: false, beard: false, hat: false, glasses: false, eyeColor: 'brown', blushing: false, hairColor: 'orange', bald: true, bigNose: true, earrings: false},
 	{name: 'Joe', gender: 'male', facialHair: false, mustache: false, beard: false, hat: false, glasses: true, eyeColor: 'brown', blushing: false, hairColor: 'yellow', bald: false, bigNose: false, earrings: false},
-	{name: 'Maria', gender: 'female', facialHair: false, mustache: false, beard: false, hat: true, glasses: false, eyeColor: 'brown', blushing: false, hairColor: 'brown', bald: false, bigNose: true, earrings: true},
+	{name: 'Maria', gender: 'female', facialHair: false, mustache: false, beard: false, hat: true, glasses: false, eyeColor: 'brown', blushing: false, hairColor: 'brown', bald: false, bigNose: false, earrings: true},
 	{name: 'Max', gender: 'male', facialHair: true, mustache: true, beard: false, hat: false, glasses: false, eyeColor: 'brown', blushing: false, hairColor: 'black', bald: false, bigNose: true, earrings: false},
 
 	{name: 'Paul', gender: 'male', facialHair: false, mustache: false, beard: false, hat: false, glasses: true, eyeColor: 'brown', blushing: false, hairColor: 'white', bald: false, bigNose: false, earrings: false}, 
