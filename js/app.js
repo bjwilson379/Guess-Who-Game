@@ -274,12 +274,16 @@ const guessWhoApp = {
 	checkWinner: function() {
 		// if character input name === winCharacter name 
 			// win the game 
+			const itemTextInput = document.querySelector('#guess-input')
 			console.log(itemTextInput.value);
-			// if(itemTextInput.value === this.winCharacter.name) {
-			// 	console.log('winner');
-			// }
+			if(this.winCharacter.name === itemTextInput.value) {
+				console.log('winner');
 		// if character input name != winCharacter name 
 			// lose the game 
+			} else {
+				console.log('loser');
+			}
+
 	},
 
 
@@ -371,11 +375,11 @@ question10.addEventListener('click', (event) => {
 // Submit a Guess - Final
 const guessInput = document.querySelector('#form-input')
 guessInput.addEventListener('submit', (event) => {
+  event.preventDefault() // <--- stops the form submission
 
   const itemTextInput = document.querySelector('#guess-input')
   guessWhoApp.checkWinner(itemTextInput.value)  
-  event.preventDefault() // <--- stops the form submission
-  	console.log(itemTextInput.value);
+  itemTextInput.value = ""
 })
 
 console.log("this is the winCharacter\n", guessWhoApp.winCharacter)
