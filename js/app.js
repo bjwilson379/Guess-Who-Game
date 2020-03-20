@@ -199,6 +199,54 @@ const guessWhoApp = {
 		}
 	},
 
+	compareBeardAndWinCharacter: function() {
+		for(let i = 0; i < characters.length; i++) {
+			if(this.winCharacter.beard === true) {
+
+				if(characters[i].beard === true) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			} else {
+
+				if(characters[i].beard === false) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			}
+		}
+	},
+
+	compareMustacheAndWinCharacter: function() {
+		for(let i = 0; i < characters.length; i++) {
+			if(this.winCharacter.mustache === true) {
+
+				if(characters[i].mustache === true) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			} else {
+
+				if(characters[i].mustache === false) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+				}
+			}
+		}
+	},
+
 	checkWinner: function() {
 		// if character input name === winCharacter name 
 			// win the game 
@@ -275,6 +323,18 @@ question6.addEventListener('click', (event) => {
 const question7 = document.querySelector('#question-7')
 question7.addEventListener('click', (event) => {
 	guessWhoApp.compareBigNoseAndWinCharacter(question7);
+})
+
+// Beard Question - 8
+const question8 = document.querySelector('#question-8')
+question8.addEventListener('click', (event) => {
+	guessWhoApp.compareBeardAndWinCharacter(question8);
+})
+
+// Mustache Question - 9
+const question9 = document.querySelector('#question-9')
+question9.addEventListener('click', (event) => {
+	guessWhoApp.compareMustacheAndWinCharacter(question9);
 })
 
 // // Submit a Guess - Final
