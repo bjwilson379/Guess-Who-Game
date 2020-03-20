@@ -18,9 +18,9 @@ const guessWhoApp = {
 
 	},
 
-	startGame: function() {
+	// startGame: function() {
 
-	},
+	// },
 
 	compareGenderAndWinCharacter: function(gender) {
 		//loop through characters array
@@ -103,10 +103,39 @@ const guessWhoApp = {
 		}
 	},
 
-	winGame: function() {
-		
+	compareGlassesAndWinCharacter: function() {
+		for(let i = 0; i < characters.length; i++) {
+			if(this.winCharacter.glasses === true) {
+
+				if(characters[i].glasses === true) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')	
+
+				}
+			} else {
+				if(characters[i].glasses === false) {
+
+				} else {
+					let thisPerson = document.querySelector(`#${characters[i].name}`)
+					// console.log("this is thisPerson inside the func\n", thisPerson);
+					thisPerson.classList.add('crossOff')						
+				}
+			} 
+		}
 	},
 
+	checkWinner: function() {
+		// if character input name === winCharacter name 
+			// win the game 
+			if(itemTextInput.value === this.winCharacter.name) {
+				console.log('winner');
+			}
+		// if character input name != winCharacter name 
+			// lose the game 
+	},
 
 
 
@@ -146,12 +175,28 @@ question2.addEventListener('click', (event) => {
 	guessWhoApp.compareFacialHairAndWinCharacter(question2);
 })
 
-// Facial Hair Question - 2
+// Facial Hair Question - 3
 const question3 = document.querySelector('#question-3')
 question3.addEventListener('click', (event) => {
 	guessWhoApp.compareHatAndWinCharacter(question3);
+})
+
+// Glasses Question - 4
+const question4 = document.querySelector('#question-4')
+question4.addEventListener('click', (event) => {
+	guessWhoApp.compareGlassesAndWinCharacter(question4);
 	console.log(event);
 })
+
+// // Submit a Guess - Final
+// const guessInput = document.querySelector('#form-input')
+// guessInput.addEventListener('submit', (event) => {
+
+//   const itemTextInput = document.querySelector('#guess-input')
+//   guessWhoApp.checkWinner(itemTextInput.value)  
+//   	console.log(itemTextInput.value);
+//   event.preventDefault() // <--- stops the form submission
+// })
 
 console.log("this is the winCharacter\n", guessWhoApp.winCharacter)
 
