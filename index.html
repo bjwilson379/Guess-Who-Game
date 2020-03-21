@@ -6,134 +6,137 @@
 </head>
 <body>
 
-<!-- Start of Game -->
-	<div class="intro-screen">
+<!-- Start of Game  -->
+	<div id="intro-screen">
 		<header><h1>Guess Who Classic</h1></header>
-		<button id="start-game">Play Now</button>
 		<p>rules/Instructions</p>
+		<button id="start-game">Play Now</button>
 	</div>
 
 
 
 <!-- the Game being played -->
-	<header><h1>Guess Who</h1></header>
+	<div id="main-screen">
+		
+		<header><h1>Guess Who</h1></header>
 
-	<aside class="questions" class="scroller"><h3>Questions:</h3>
-		<div>Is the character a man?</div>
-			<button id="question-1">Question 1</button>
-		<div>Does the character have facial hair?</div>
-			<button id="question-2">Question 2</button>
-		<div>Does the character wear a hat?</div>
-			<button id="question-3">Question 3</button>
-		<div>Does the character wear glasses?</div>
-			<button id="question-4">Question 4</button>
-		<div>Is the character blushing?</div>
-			<button id="question-5">Question 5</button>		
-		<div>Is the character bald?</div>
-			<button id="question-6">Question 6</button>		
-		<div>Does the character have a big nose?</div>
-			<button id="question-7">Question 7</button>	
-		<div>Does the character have a beard?</div>
-			<button id="question-8">Question 8</button>		
-		<div>Does the character have a mustache?</div>
-			<button id="question-9">Question 9</button>	
-		<div>Is the character wearing earrings?</div>
-			<button id="question-10">Question 10</button>	
+		<aside class="questions" class="scroller"><h3>Questions:</h3>
+			<div>Is the character a man?</div>
+				<button id="question-1">Question 1</button>
+			<div>Does the character have facial hair?</div>
+				<button id="question-2">Question 2</button>
+			<div>Does the character wear a hat?</div>
+				<button id="question-3">Question 3</button>
+			<div>Does the character wear glasses?</div>
+				<button id="question-4">Question 4</button>
+			<div>Is the character blushing?</div>
+				<button id="question-5">Question 5</button>		
+			<div>Is the character bald?</div>
+				<button id="question-6">Question 6</button>		
+			<div>Does the character have a big nose?</div>
+				<button id="question-7">Question 7</button>	
+			<div>Does the character have a beard?</div>
+				<button id="question-8">Question 8</button>		
+			<div>Does the character have a mustache?</div>
+				<button id="question-9">Question 9</button>	
+			<div>Is the character wearing earrings?</div>
+				<button id="question-10">Question 10</button>	
 
-		<div>Do you want to guess who you think it is:</div>
-			<form id="form-input">
-				<input id="guess-input" placeholder="Your Guess" /></input>
-				<button>Submit</button>
-			</form>
-	</aside>
-
-
-		<div class="mainContainer"> 
-			<div class="divColumn">
-				<div id="Alex" class="numberRow">
-					<img class="card-image" src=https://i.imgur.com/HaXcMH0.jpg>
-				</div>
-				<div id="Alfred" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/3a7tRI6.jpg">
-				</div>
-				<div id="Anita" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/kmjftZV.jpg">
-				</div>
-				<div id="Anne" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/qdxcUav.jpg">
-				</div>
-				<div id="Bernard" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/UHuJxo3.jpg">
-				</div>				
-				<div id="Bill" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/T87rx2w.jpg">
-				</div>
-				<div id="Charles" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/AG9HROg.jpg">
-				</div>
-				<div id="Claire" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/J5Zk3xj.jpg">
-				</div>
+			<div>Do you want to guess who you think it is:</div>
+				<form id="form-input">
+					<input id="guess-input" placeholder="Your Guess" /></input>
+					<button>Submit</button>
+				</form>
+		</aside>
 
 
+			<div class="mainContainer"> 
+				<div class="divColumn">
+					<div id="Alex" class="numberRow">
+						<img class="card-image" src=https://i.imgur.com/HaXcMH0.jpg>
+					</div>
+					<div id="Alfred" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/3a7tRI6.jpg">
+					</div>
+					<div id="Anita" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/kmjftZV.jpg">
+					</div>
+					<div id="Anne" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/qdxcUav.jpg">
+					</div>
+					<div id="Bernard" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/UHuJxo3.jpg">
+					</div>				
+					<div id="Bill" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/T87rx2w.jpg">
+					</div>
+					<div id="Charles" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/AG9HROg.jpg">
+					</div>
+					<div id="Claire" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/J5Zk3xj.jpg">
+					</div>
 
-			</div>
-				
-			<div class="divColumn">
-				<div id="David" class="numberRow">
-					<img class="card-image" src=https://i.imgur.com/KO28ju5.jpg/>
-				</div>
-				<div id="Eric" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/cYU8GHE.jpg">
-				</div>
-				<div id="Frans" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/85zanof.jpg">
-				</div>
-				<div id="George" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/CY7QWyf.jpg">
-				</div>	
-				<div id="Herman" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/gX3Bt4l.jpg">
-				</div>
-				<div id="Joe" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/fpzc76A.jpg">
-				</div>
-				<div id="Maria" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/vxqkaAv.jpg">
-				</div>
-				<div id="Max" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/lsbvONv.jpg">
-				</div>
-			</div>
 
-			<div class="divColumn">
-				<div id="Paul" class="numberRow">
-					<img class="card-image" src=https://i.imgur.com/SOafEp2.jpg/>
-				</div>
-				<div id="Peter" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/7rDqjbd.jpg">
-				</div>
-				<div id="Philip" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/A04Xbgl.jpg">
-				</div>
-				<div id="Richard" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/4H8aBw0.jpg">
-				</div>			
-				<div id="Robert" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/xB9j1zX.jpg">
-				</div>
-				<div id="Sam" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/Gt1iDF0.jpg">
-				</div>
-				<div id="Susan" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/2y095lB.jpg">
-				</div>
-				<div id="Tom" class="numberRow">
-					<img class="card-image" src="https://i.imgur.com/6Jrc83w.jpg">
-				</div>
-			</div>
-		</div> 
 
+				</div>
+					
+				<div class="divColumn">
+					<div id="David" class="numberRow">
+						<img class="card-image" src=https://i.imgur.com/KO28ju5.jpg/>
+					</div>
+					<div id="Eric" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/cYU8GHE.jpg">
+					</div>
+					<div id="Frans" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/85zanof.jpg">
+					</div>
+					<div id="George" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/CY7QWyf.jpg">
+					</div>	
+					<div id="Herman" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/gX3Bt4l.jpg">
+					</div>
+					<div id="Joe" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/fpzc76A.jpg">
+					</div>
+					<div id="Maria" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/vxqkaAv.jpg">
+					</div>
+					<div id="Max" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/lsbvONv.jpg">
+					</div>
+				</div>
+
+				<div class="divColumn">
+					<div id="Paul" class="numberRow">
+						<img class="card-image" src=https://i.imgur.com/SOafEp2.jpg/>
+					</div>
+					<div id="Peter" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/7rDqjbd.jpg">
+					</div>
+					<div id="Philip" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/A04Xbgl.jpg">
+					</div>
+					<div id="Richard" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/4H8aBw0.jpg">
+					</div>			
+					<div id="Robert" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/xB9j1zX.jpg">
+					</div>
+					<div id="Sam" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/Gt1iDF0.jpg">
+					</div>
+					<div id="Susan" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/2y095lB.jpg">
+					</div>
+					<div id="Tom" class="numberRow">
+						<img class="card-image" src="https://i.imgur.com/6Jrc83w.jpg">
+					</div>
+				</div>
+			</div> 
+
+	</div>
 
 
 

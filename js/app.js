@@ -4,6 +4,7 @@
 const guessWhoApp = {
 
 	winCharacter: null,
+	questionCounter: 0,
 
 	selectRandomCharacter: function() {
 		// get person from the array and store in prop above
@@ -15,12 +16,21 @@ const guessWhoApp = {
 
 		// store in above property
 		this.winCharacter = char
+		console.log("this is the winCharacter\n", guessWhoApp.winCharacter)
 
 	},
 
-	// startGame: function() {
+	startGame: function() {
 
-	// },
+		guessWhoApp.selectRandomCharacter()
+
+		// HIDE INTRO SCREEN -- DISPLAY: NONE
+		const hideIntroScreen = document.querySelector('#intro-screen')
+		hideIntroScreen.setAttribute('style', 'display: none')
+		
+
+		// SHOW MAIN SCREEN -- 
+	},
 
 	compareGenderAndWinCharacter: function(gender) {
 		//loop through characters array
@@ -275,14 +285,15 @@ const guessWhoApp = {
 		// if character input name === winCharacter name 
 			// win the game 
 			const itemTextInput = document.querySelector('#guess-input')
-			console.log(itemTextInput.value);
-			if(this.winCharacter.name === itemTextInput.value) {
+			// console.log(itemTextInput.value);
+			if(this.winCharacter.name === itemTextInput.value || this.winCharacter.name === event.target.parentNode.id) {
 				console.log('winner');
 		// if character input name != winCharacter name 
 			// lose the game 
 			} else {
 				console.log('loser');
-			}
+			} 
+
 
 	},
 
@@ -302,14 +313,14 @@ const guessWhoApp = {
 	}
 }
 
-guessWhoApp.selectRandomCharacter()
+//guessWhoApp.startGame()
+//guessWhoApp.selectRandomCharacter()
 //guessWhoApp.compareGenderAndWinCharacter()
 
 // Start Game
-	const startGameButton = document.querySelector('#start-game')
-	startGameButton.addEventListener('click', (event) => {
+const startGameButton = document.querySelector('#start-game')
+startGameButton.addEventListener('click', (event) => {
 	guessWhoApp.startGame(startGameButton);
-	console.log(event);
 })
 
 // Gender Question - 1
@@ -377,13 +388,16 @@ const guessInput = document.querySelector('#form-input')
 guessInput.addEventListener('submit', (event) => {
   event.preventDefault() // <--- stops the form submission
 
-  const itemTextInput = document.querySelector('#guess-input')
-  guessWhoApp.checkWinner(itemTextInput.value)  
-  itemTextInput.value = ""
+ const itemTextInput = document.querySelector('#guess-input')
+ guessWhoApp.checkWinner(itemTextInput.value)  
+ itemTextInput.value = ""
 })
 
-console.log("this is the winCharacter\n", guessWhoApp.winCharacter)
 
-
-
-
+const clickContainer = document.querySelector('.mainContainer')
+// listen to container
+// console.log([event.target])
+clickContainer.addEventListener('click', (event) => {
+	console.log([event.target.parentNode.id]);
+	guessWhoApp.checkWinner(clickContainer)
+})
