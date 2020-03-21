@@ -31,6 +31,12 @@ const guessWhoApp = {
 		// SHOW MAIN SCREEN -- 
 		const showMainScreen = document.querySelector('#main-screen')
 		showMainScreen.setAttribute('style', 'display: flex')
+
+		// HIDE WIN/LOSE SCREEN IF PLAYING AGAIN
+		const hideLoseScreen = document.querySelector('#lose-screen')
+		hideLoseScreen.setAttribute('style', 'display: none')	
+		// const showLoseScreen = document.querySelector('#winner-screen')
+		// showLoseScreen.setAttribute('style', 'display: none')		
 	},
 
 	compareGenderAndWinCharacter: function(gender) {
@@ -335,6 +341,11 @@ const guessWhoApp = {
 const startGameButton = document.querySelector('#start-game')
 startGameButton.addEventListener('click', (event) => {
 	guessWhoApp.startGame(startGameButton);
+})
+
+const playAgainButton = document.querySelector('.playAgain')
+playAgainButton.addEventListener('click', (event) => {
+	guessWhoApp.startGame(playAgainButton)
 })
 
 // Gender Question - 1
