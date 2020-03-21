@@ -6,7 +6,15 @@
 }
 
 #main-screen {
+	display: none;
+}
 
+#winner-screen {
+	display: none;
+}
+
+#lose-screen {
+	display: none;
 }
 
 body {
@@ -45,7 +53,7 @@ section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100px;
+	width: 125px;
 	padding-top: 3px;
 	padding-bottom: 3px;
 }

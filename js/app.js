@@ -28,8 +28,9 @@ const guessWhoApp = {
 		const hideIntroScreen = document.querySelector('#intro-screen')
 		hideIntroScreen.setAttribute('style', 'display: none')
 		
-
 		// SHOW MAIN SCREEN -- 
+		const showMainScreen = document.querySelector('#main-screen')
+		showMainScreen.setAttribute('style', 'display: flex')
 	},
 
 	compareGenderAndWinCharacter: function(gender) {
@@ -288,10 +289,23 @@ const guessWhoApp = {
 			// console.log(itemTextInput.value);
 			if(this.winCharacter.name === itemTextInput.value || this.winCharacter.name === event.target.parentNode.id) {
 				console.log('winner');
+
+
+				const showMainScreen = document.querySelector('#main-screen')
+				showMainScreen.setAttribute('style', 'display: none')
+
+				const showWinnerScreen = document.querySelector('#winner-screen')
+				showWinnerScreen.setAttribute('style', 'display: flex')
 		// if character input name != winCharacter name 
 			// lose the game 
 			} else {
 				console.log('loser');
+
+				const showMainScreen = document.querySelector('#main-screen')
+				showMainScreen.setAttribute('style', 'display: none')
+
+				const showLoseScreen = document.querySelector('#lose-screen')
+				showLoseScreen.setAttribute('style', 'display: flex')
 			} 
 
 
