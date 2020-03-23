@@ -16,14 +16,14 @@ const guessWhoApp = {
 
 		// store in above property
 		this.winCharacter = char
-		console.log("this is the winCharacter\n", guessWhoApp.winCharacter)
+		// console.log("this is the winCharacter\n", guessWhoApp.winCharacter)
 
 	},
 
 	startGame: function() {
 
 		guessWhoApp.selectRandomCharacter()
-
+		console.log("this is the game's winCharacter\n", this.winCharacter)
 		// HIDE INTRO SCREEN -- DISPLAY: NONE
 		const hideIntroScreen = document.querySelector('#intro-screen')
 		hideIntroScreen.setAttribute('style', 'display: none')
@@ -36,7 +36,13 @@ const guessWhoApp = {
 		const hideLoseScreen = document.querySelector('#lose-screen')
 		hideLoseScreen.setAttribute('style', 'display: none')	
 		// const showLoseScreen = document.querySelector('#winner-screen')
-		// showLoseScreen.setAttribute('style', 'display: none')		
+		// showLoseScreen.setAttribute('style', 'display: none')
+
+
+		// remove the cross off style from every character
+		let removeCrossOff = document.querySelectorAll('.crossOff')
+		//removeCrossOff.classList.remove('crossOff')
+
 	},
 
 	compareGenderAndWinCharacter: function(gender) {
@@ -294,7 +300,7 @@ const guessWhoApp = {
 			const itemTextInput = document.querySelector('#guess-input')
 			// console.log(itemTextInput.value);
 			if(this.winCharacter.name === itemTextInput.value || this.winCharacter.name === event.target.parentNode.id) {
-				console.log('winner');
+				//console.log('winner');
 
 
 				const showMainScreen = document.querySelector('#main-screen')
@@ -305,7 +311,7 @@ const guessWhoApp = {
 		// if character input name != winCharacter name 
 			// lose the game 
 			} else {
-				console.log('loser');
+				//console.log('loser');
 
 				const showMainScreen = document.querySelector('#main-screen')
 				showMainScreen.setAttribute('style', 'display: none')
@@ -423,6 +429,6 @@ const clickContainer = document.querySelector('.mainContainer')
 // listen to container
 // console.log([event.target])
 clickContainer.addEventListener('click', (event) => {
-	console.log([event.target.parentNode.id]);
+	//console.log([event.target.parentNode.id]);
 	guessWhoApp.checkWinner(clickContainer)
 })

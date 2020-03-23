@@ -11,11 +11,16 @@
 
 #winner-screen {
 	display: none;
+	justify-content: center;
+	align-items: center;
 }
 
 #lose-screen {
 	display: none;
+	justify-content: center;
+	text-align: center;
 }
+
 
 body {
 	background-color: lightsteelblue;
